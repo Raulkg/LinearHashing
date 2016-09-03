@@ -123,9 +123,11 @@ public class RandomAccess {
 		Serializer.fileSerialize(pageDeAllocated, Constant.DISK_DEALLOC);
 	}
 
-	public void DiskStatus() {
+	public String DiskStatus() {
 		// TODO Auto-generated method stub
-		System.out.println("pages allocated : " + pageAllocated);
-		System.out.println("pages deallocated : " + pageDeAllocated);
+		System.out.println("<tr><td>pages allocated : </td><td>" + pageAllocated +"</td></tr>");
+		System.out.println("<tr><td>pages deallocated : </td><td>" + pageDeAllocated + "</td></tr>");
+		
+		return "<tr><td>pages allocated : </td><td>" + pageAllocated +"</td></tr><tr><td>pages deallocated : </td><td>" + pageDeAllocated + "</td></tr>";
 	}
 }
